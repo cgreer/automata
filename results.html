@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>CA Viewer</title>
+</head>
+
+<body>
+
+<canvas id="myCanvas" width="140" height="140" style="border:1px solid">
+</canvas>
+
+<script type="text/javascript">
+  var theCanvas = document.getElementById("myCanvas");
+  var ctx = theCanvas.getContext("2d");
+
+  function draw_frame(context, frame){
+
+    ctx.fillStyle = "white";
+    ctx.fillRect(0,0, window.frameWidth, window.frameHeight);
+
+    for (var i in frame){
+      var cellState = frame[i];
+      if (cellState != "0"){
+        var yCoord = Math.floor(i/window.frameWidth);
+        var xCoord = i - (yCoord * window.frameWidth);
+        ctx.fillStyle = "black";
+        ctx.fillRect(xCoord, yCoord, 1, 1);
+      }
+    }
+  }
+
+  function draw_next_frame(frames){
+
+    theFrame = frames[window.fIndex];
+    draw_frame(ctx, theFrame, 10, 10);
+    if (window.fIndex == frames.length){
+      window.fIndex = 0;
+    }else{
+      window.fIndex = window.fIndex + 1;
+    }
+  }
+</script>
+
+<script type="text/javascript" src="results.js"></script>
+
+</body>
+</html>
