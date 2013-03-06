@@ -3,6 +3,8 @@ Cellular-Automata
 
 Simple Cellular Automata Generator Written in Python.  Uses an HTML file to view the results
 
+![browser_display](https://github.com/sequenceGeek/Cellular-Automata/blob/master/sample.gif)
+
 Usage
 =====
 
@@ -12,3 +14,5 @@ Usage
     python ca.py
 
 Results can be visually viewed in the browser by opening the **results.html** file
+
+
