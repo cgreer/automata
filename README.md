@@ -1,7 +1,7 @@
 Automata
 =================
 
-Simple Cellular Automata Generator Written in Python.  Uses an HTML file to view the results
+Simple cellular automata generator written in Python.
 
 ![Sample Output](https://github.com/sequenceGeek/Cellular-Automata/raw/master/sample.gif)
 
